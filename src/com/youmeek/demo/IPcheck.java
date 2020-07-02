@@ -1,11 +1,14 @@
 package com.youmeek.demo;
 
+import org.apache.log4j.Logger;
 import java.util.Scanner;
+
 
 /**
  * Created by admin on 2020/7/1.
  */
 public class IPcheck {
+    static Logger logger = Logger.getLogger(com.youmeek.demo.IPcheck.class.getName());
 
     public static void exeCheck() {
         Scanner sc = new Scanner(System.in);
