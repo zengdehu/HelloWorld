@@ -10,7 +10,7 @@ public class IPcheck {
     public static void exeCheck() {
         Scanner sc = new Scanner(System.in);
 
-        System.out.println("请输入ip地址");
+        System.out.println("请输入2个ip地址和一个掩码地址，各地址回车换行:");
         while (sc.hasNext()) {
             String mask = sc.next();
             String ip1 = sc.next();
@@ -24,7 +24,8 @@ public class IPcheck {
     }
 
     /*
-
+     * 分解输入的3组参数：判断长度及合法性是否符合ip
+     *
      */
     public static int checkNetSegment(String mask, String ip1, String ip2) {
         int[] numMask = getNums(mask);
@@ -52,6 +53,9 @@ public class IPcheck {
         return res;
     }
 
+    /*
+     *IP地址和掩码地址的合法性
+     */
     public static boolean illegalAddr(int[] addr) {
         if (addr.length != 4) {
             return true;
